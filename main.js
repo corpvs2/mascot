@@ -65,7 +65,6 @@ ipcMain.on('async-request', function(event, arg) {
 
   switch (index) {
   case "listFromFile":
-    //event.sender.send('async-reply', [index, [{"path": "C:\\Users\\pioka\\Pictures\\j_m_TG-005_Grimoire-of-Darkness.png","top": 200,"left": 200,"width": 200,"height": 200}]]);
     var list = [];
     try { list = JSON.parse(fs.readFileSync(configPath, 'utf8')); }
     catch(e) { list = []; }

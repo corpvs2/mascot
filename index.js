@@ -46,7 +46,7 @@ ipcRenderer.on('async-reply', function(event, arg) {
 
 // 初期化 IPCから呼ばれる
 function init(imgList) {
-  if (imgList.length > 1) {
+  if (imgList.length > 0) {
     for (var i=0,img; img=imgList[i]; i++) {
       var image = $("<img>", {
         "src": img["path"],
